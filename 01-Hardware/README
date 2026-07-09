@@ -1,0 +1,30 @@
+ # Orange Pi Zero 3W Engineering Notes
+
+This directory contains engineering notes for using the Orange Pi Zero 3W as a lightweight SwarmDock / SwarmPlug edge node.
+
+## Tested Baseline
+
+| Item | Value |
+|---|---|
+| Board | Orange Pi Zero 3W |
+| OS | Ubuntu Jammy vendor image |
+| Kernel | `6.6.98-sun60iw2` |
+| Architecture | `aarch64` |
+| Role | Lightweight edge node |
+
+## Notes
+
+| File | Description |
+|---|---|
+| [01-orange-pi-zero-3w-enable-tun-for-tailscale.md](01-orange-pi-zero-3w-enable-tun-for-tailscale.md) | Build and install `tun.ko` so Tailscale can create `tailscale0`. |
+| [02-orange-pi-zero-3w-ar9271-ibss-batman-adv-mesh.md](02-orange-pi-zero-3w-ar9271-ibss-batman-adv-mesh.md) | Configure an AR9271 USB Wi-Fi adapter for IBSS/ad-hoc + BATMAN-ADV mesh networking. |
+
+## Network Role
+
+The intended node layout is:
+
+```text
+wlan0              management Wi-Fi / LAN / SSH
+tailscale0         remote management overlay
+USB Wi-Fi          IBSS/ad-hoc mesh underlay
+bat0               BATMAN-ADV Layer-2 mesh interface
