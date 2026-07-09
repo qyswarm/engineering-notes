@@ -5,6 +5,7 @@ This note documents a minimal, reproducible procedure for enabling TUN support o
 The goal is not to rebuild the whole operating system image. The goal is to build and install only the missing `tun.ko` module that matches the currently running kernel.
 
 ---
+![Uploading 图片1.png…]()
 
 ## 1. Tested environment
 
