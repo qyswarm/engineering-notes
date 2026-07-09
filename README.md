@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # Engineering Notes
 
 Engineering notes for edge robotics infrastructure, Linux-based single-board computers, ROS networking, Wi-Fi mesh, and SwarmDock / SwarmPlug experiments.
